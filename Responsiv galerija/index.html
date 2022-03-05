@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Grid Basics</title>
+        <style>
+
+            body{
+
+                font-family: sans-serif;
+
+                }
+
+            #grid-container {
+    
+                display: grid;
+                margin:0 auto;
+                grid-gap: 26px;
+                max-width: 960px;
+                width: 90%;
+                grid-template-columns: repeat(1,auto);
+                grid-template-rows: repeat(3,auto);
+
+                }
+
+            #grid1 {
+                
+                display: grid;
+                grid-template-columns: repeat(5,auto);
+                grid-auto-rows: minmax(130px, auto);
+                justify-content: space-between;
+                
+                }
+
+            #grid1>div {
+                
+                width: 160%;
+                height: 57px;
+                background-image: url(placeholder-image.png), linear-gradient(rgba(26, 19, 232, 0.51) 82%,white 18%);
+                background-size: contain;
+                border-radius: 8px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+                font-size: 10px;
+                color: #7c7ccc;
+                line-height: 105px;
+                text-align: center;  
+                
+                }
+            footer {
+
+                margin-top: -84px;
+
+                }
+            
+            @media screen and (max-width: 1024px) {
+            #grid-container {
+    
+            width: 100%;
+            }
+            }
+
+            @media screen and (max-width: 768px) {
+            #grid-container {
+    
+            width: 75%;
+            }
+            }
+
+            @media screen and (max-width: 414px) {
+            #grid-container {
+   
+            width: 40%;
+            }
+            } 
+
+
+            @media screen and (max-width: 1024px) {
+            #grid1 {
+            grid-template-columns: repeat(5, auto);
+            }
+            }
+
+            @media screen and (max-width: 768px) {
+            #grid1 {
+            grid-template-columns: repeat(3, auto);
+            }
+            }
+
+            @media screen and (max-width: 414px) {
+            #grid1 {
+            grid-template-columns: repeat(1, auto);
+            }
+            header{
+
+                margin-left: -11px;
+            }
+            }
+             
+
+        </style>
+    </head>
+
+    <body>
+
+    <div id="grid-container">
+
+        <header>Galery Heading</header>
+
+        <article>
+            <div id="grid1">
+                <div>Image Title</div>
+                <div>Image Title</div>
+                <div>Image Title</div>
+                <div>Image Title</div>
+                <div>Image Title</div>
+                <div>Image Title</div>
+                <div>Image Title</div>
+                <div>Image Title</div>
+                <div>Image Title</div>
+                <div>Image Title</div>
+            </div>
+    
+        </article>
+
+        <footer>
+            <p>Lorem ipsum dolor sit amet. 
+            Sed voluptas aperiam in assumenda omnis qui
+             sequi culpa sed accusamus voluptatem At voluptate
+              itaque. Hic repudiandae expedita sed galisum omnis
+               aut galisum nihil vel omnis itaque. Qui sunt exerci
+               tationem aut obcaecati earum id veniam corrupti eum
+                exercitationem accusantium et voluptate doloribus es
+                t reiciendis dolores sed eveniet voluptate.</p>
+        </footer>
+
+        
+
+    </div>
+        
+    </body>
+
+</html>
